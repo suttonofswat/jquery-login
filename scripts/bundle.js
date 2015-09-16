@@ -9,10 +9,13 @@ $(document).ready(function () {
 	var passError = $('#passError');
 	var combo = $('#combo');
 	var button = $('button');
-	var hasError = false;
 
 	button.on('click', function (e) {
 		e.preventDefault();
+
+		userError.text('');
+		passError.text('');
+		var hasError = false;
 
 		if (unInput.val().indexOf('@') === -1) {
 			hasError = true;
